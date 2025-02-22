@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css" type="text/css">
+  <title>Rocket Rectangle</title>
+</head>
+<body>
+  <main id="main-frame">
+    <!---->
+    <div id="player-speed-engine-area" class="flex row going-center gap std-vanished std-box">
+      <!-- Its value changes as settings are altered -->
+      <input type="text" id="speed-input" class="std-vanished" value="0">
+    </div>
+
+    <!---->
+    <div id="menu-area" class="flex column going-center std-box">
+      <div id="game-logo-frame" class="flex column going-center">
+        <h2 id="game-title">Rocket Rectangle</h2>
+        <p id="game-logo">🚀</p>
+      </div>
+      
+      <div id="game-features-frame" class="flex row going-center">
+        <button id="game-launcher-btn">iniciar</button>
+        <p id="game-settings">⚙️</p>
+        <p id="controls-settings">🎮</p>
+      </div>
+    </div>
+    
+    <!---->
+    <div id="settings-area" class="flex column going-left std-vanished std-box">
+      
+      <div id="settings-title-frame" class="flex row going-center">
+        <h1 id="settings-title">Configurações</h1>
+      </div>
+
+      <div id="difficulty-frame" class="flex row going-left gap">
+        <h3 id="label-difficulty">Dificuldade</h3>
+        <div id="levels-frame" class="flex row going-center gap">
+          <!-- sent to DOM, nothing on style -->
+          <button id="easy-btn">fácil</button>
+          <button id="medium-btn">médio</button>
+          <button id="hard-btn">difícil</button>
+        </div>
+      </div>
+
+      <div id="background-frame" class="flex row going-left gap">
+        <h3 id="label-background">Plano de fundo</h3>
+        
+        <div id="models" class="flex row going-center gap">
+          <p id="model-a" class="std-frame"></p>
+          <p id="model-b" class="std-frame"></p>
+          <p id="model-c" class="std-frame"></p>
+          <p id="model-d" class="std-frame"></p>
+          <p id="model-e" class="std-frame"></p>
+        </div>
+      </div>
+      
+      <div id="custom-background-label-frame" class="flex row going-left">
+        <h3 id="custom-background-label">Seu plano de fundo</h3>
+      </div>
+
+      <div id="custom-background-frame" class="flex row going-left gap">
+        <div id="rgb-inputs-frame" class="flex row going-center gap">
+          <!-- Classes here sent to DOM -->
+          <div id="first-color" class="flex column going-center std-smooth">
+            <span>esquerda</span>
+            <input class="rgb" id="red-s1" type="text" size="1" placeholder="cor 1" value="0">
+            <input class="rgb" id="green-s1" type="text" size="1" placeholder="cor 2" value="0">
+            <input class="rgb" id="blue-s1" type="text" size="1" placeholder="cor 3" value="0">
+          </div>
+          <div id="second-color" class="flex column going-center std-smooth">
+            <span>meio</span>
+            <input class="rgb" id="red-s2" type="text" size="1" placeholder="cor 1" value="0">
+            <input class="rgb" id="green-s2" type="text" size="1" placeholder="cor 2" value="0">
+            <input class="rgb" id="blue-s2" type="text" size="1" placeholder="cor 3" value="0">
+          </div>
+          <div id="third-color" class="flex column going-center std-smooth">
+            <span>direita</span>
+            <input class="rgb" id="red-s3" type="text" size="1" placeholder="cor 1" value="0">
+            <input class="rgb" id="green-s3" type="text" size="1" placeholder="cor 2" value="0">
+            <input class="rgb" id="blue-s3" type="text" size="1" placeholder="cor 3" value="0">
+          </div>
+          <!-- Window with the preview of the background -->
+          <div id="user-custom-background-frame" class="flex row going-center std-smooth">
+            <p id="user-custom-background"></p>
+            <button id="suggest-btn">sugerir</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="save-btn-frame" class="flex row going-center">
+        <button id=save-btn>salvar</button>
+      </div>
+      
+    </div>
+    
+    <!---->
+    <div id="controls-area" class="flex column going-center std-vanished std-box">
+      <h1 id="tutorial-label" class="std-offset-bottom">Tutorial</h1>
+      <h3 id="moves-label" class="std-offset-bottom">Movimentos</h3>
+      
+      <div id="moves-frame" class="flex row going-center gap std-key-item">
+        <div class="std-cell">
+          <span id="direction-up">⬆️</span>
+          <span id="direction-up-key">W</span>
+        </div>
+        <div class="std-cell">
+          <span id="direction-right">➡️</span>
+          <span id="direction-right-key">D</span>
+        </div>
+        <div class="std-cell">
+          <span id="direction-down">⬇️</span>
+          <span id="direction-down-key">S</span>
+        </div>
+        <div class="std-cell">
+          <span id="direction-left">⬅️</span>
+          <span id="direction-left-key">A</span>
+        </div>
+      </div>
+
+      <div id="goals-frame" class="flex column going-center gap">
+        <h3 id="goals-label" class="std-offset-top">Objetivos</h3>
+        <div class="std-cell">
+          <ul id="goals-steps">
+            <li>Usar as teclas p/ movimentar o foguete</li>
+            <li><b>Colidir</b> com os adjetivos possessivos</li>
+            <li><b>Desviar</b> dos pronomes pessoais</li>
+            <li>Ao colidir com adjetivo possessivo: <b>o bloco some</b></li>
+            <li>Ao colidir com pronome: <b>foguete gira</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="mechanics-frame" class="flex column going-center gap">
+        <h3 id="goals-label" class="std-offset-top">Mecânica</h3>
+        <div class="std-cell">
+          <ul id="mechanics-steps">
+            <li>O jogo realiza um cálculo de performance</li>
+            <li>Isso leva em considerações, fatores como:</li>
+            <li><b>tempo levado p/ terminar o percurso</b></li>
+            <li><b>quantidade de cliques dados</b></li>
+            <li><b>quantidade de acertos</b></li>
+            <li><b>quantidade de erros</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="tutorial-return-btn-frame" class="flex row going-center std-offset-top">
+        <button id="tutorial-return-btn">voltar</button>
+      </div>
+
+    </div>
+
+    <!---->
+    <div id="spaceship-area" class="flex column going-center std-vanished std-box">
+
+      <div id="after-end-game-area" class="std-vanished">
+        <p>tempo de percurso: <span class="std-criteria"></span></p>
+        <p>núm. de cliques: <span class="std-criteria"></span></p>
+        <p>punição: <span class="std-criteria"></span></p>
+      </div>
+      
+      <div id="dexterity-frame" class="flex row going-center">
+        <div id="dexterity-bar" class="std-vanished">
+          <p id="dexterity-percentage"></p>
+        </div>
+      </div>
+
+      <div id="objects-frame" class="flex row going-center gap">
+        <span id="cheat">🗣️ | 👽</span>
+        <button id="give-up-btn">sair ✋🏻</button>
+        <span id="clock">🕰️</span>
+        <span id="spaceship">🚀</span>
+        <span id="info-block">💡</span>
+      </div>
+
+      <div id="partial-report-frame" class="flex column going-center">
+        <span id="correct" class="tool"></span>
+        <span id="incorrect"></span>
+      </div>
+
+      <div id="reboot-btn-frame" class="flex column going-center">
+        <button id="reboot-btn" class="std-offset-top std-vanished">recomeçar</button>
+      </div>
+      
+    </div>
+
+    <!---->
+    <div id="rectangles-area" class="flex row going-center std-vanished std-poor-view std-box"></div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
