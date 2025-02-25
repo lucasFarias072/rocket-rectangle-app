@@ -1,0 +1,458 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+.column {
+  flex-flow: column wrap;
+}
+.row {
+  flex-flow: row wrap;
+}
+.going-center {
+  align-items: center;
+  justify-content: center;
+}
+.gap {
+  gap: 1rem;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button {
+  border: black solid 1px;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+input {
+  background-color: black;
+  box-shadow: 0 0 1rem rgb(10, 20, 30);
+  border: #222 solid 1px;
+  padding: .5rem;
+  margin: .5rem;
+  outline: none;
+  color: aqua;
+  font-size: .9rem;
+}
+
+li {
+  margin-left: 1rem;
+  font-size: .9rem;
+}
+
+.std-captured {
+  border: transparent solid .1px;
+  color: transparent;
+  opacity: .1;
+}
+
+.std-cell {
+  background-color: rgb(200, 200, 100);
+  padding: .7rem;
+  border-radius: .3rem;
+}
+
+.std-criteria {
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  padding: .1rem .5rem;
+}
+
+.std-frame {
+  height: 4rem;
+  width: 5rem;
+}
+
+.std-key-item {
+  font-size: 2rem;
+}
+
+.std-offset-bottom {
+  margin-bottom: 1rem;
+}
+
+.std-offset-top {
+  margin-top: 1rem;
+}
+
+.std-poor-view {
+  opacity: .1;
+}
+
+.std-smooth {
+  transition: all linear .5s;
+}
+
+.std-vanished {
+  display: none;
+}
+
+#controls-area h1, #controls-area h3 {
+  background-color: rgb(200, 200, 100);
+  border-radius: .5rem;
+  padding: 0 2rem;
+}
+
+#controls-area #tutorial-return-btn-frame #tutorial-return-btn {
+  background-color: rgb(200, 200, 100);
+  color: black;
+}
+
+/* #menu-area */
+#menu-area {
+  height: 100vh;
+}
+
+#menu-area #controls-settings, #menu-area #game-settings {
+  cursor: pointer;
+  font-size: 3rem;
+  text-shadow: 0 0 2rem rgb(128, 128, 128);
+}
+
+#menu-area #game-launcher-btn {
+  background-color: rgb(0, 50, 100);
+}
+
+#menu-area #game-logo {
+  font-size: 10rem;
+  transform: rotate(45deg);
+  transition: linear all .5s;
+}
+
+#menu-area #game-title {
+  /* color: rgb(200, 200, 100); */
+  font-size: 4rem;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: 0 0 2rem rgb(200, 200, 100);
+}
+
+#settings-area {
+  color: white;
+  margin: .7rem;
+  padding: .5rem;
+  text-shadow: 0 0 1rem black;
+}
+
+#settings-area > * {
+  margin-top: 1.5rem;
+}
+
+#settings-area #background-frame {
+  background-color: rgb(33, 66, 99);
+  border-radius: .2rem;
+  padding: .2rem;
+}
+
+#settings-area #background-frame #label-background {
+  width: 100%;
+}
+
+#settings-area #background-frame #models #model-a {
+  background-image: linear-gradient(15deg, rgb(255, 0, 0), rgb(33, 66, 99), rgb(0, 0, 0));
+}
+#settings-area #background-frame #models #model-b {
+  background-image: linear-gradient(15deg, rgb(200, 200, 0), rgb(200, 0, 0), rgb(100, 0, 0));
+}
+#settings-area #background-frame #models #model-c {
+  background-image: linear-gradient(15deg, rgb(0, 0, 0), rgb(33, 66, 99), rgb(0, 0, 0));
+}
+#settings-area #background-frame #models #model-d {
+  background-image: linear-gradient(15deg, rgb(33, 66, 99), rgb(0, 33, 0), rgb(0, 0, 33));
+}
+#settings-area #background-frame #models #model-e {
+  background-image: linear-gradient(15deg, rgb(200, 100, 100), rgb(100, 200, 100), rgb(100, 100, 200));
+}
+
+#settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #suggest-btn {
+  color: black;
+  margin-left: .2rem;
+}
+
+#settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #user-custom-background {
+  border-radius: 1rem;
+  height: 8rem; 
+  width: 8rem; 
+}
+
+#settings-area #difficulty-frame #levels-frame #easy-btn {
+  background-color: green;
+}
+
+#settings-area #difficulty-frame #levels-frame #medium-btn {
+  background-color: orange;
+}
+
+#settings-area #difficulty-frame #levels-frame #hard-btn {
+  background-color: red;
+}
+
+#settings-area #levels-frame > * {
+  color: black;
+}
+
+#settings-area #save-btn-frame #save-btn {
+  background-color: rgb(120, 200, 90);
+  position: fixed;
+  left: 50%;
+  top: 90%;
+}
+
+#spaceship-area #after-end-game-area {
+  border: #222 solid 1px;
+  border-radius: .5rem;
+  padding: .5rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+#spaceship-area #dexterity-frame #dexterity-bar {
+  border-radius: 1rem;
+  background-image: linear-gradient(to top, white 100%);
+  box-shadow: 0 0 1rem rgb(33, 66, 99);
+  height: 9rem;
+  width: 1rem;
+} 
+
+#spaceship-area #dexterity-frame #dexterity-percentage {
+  color: yellow;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  left: 2rem;
+  top: 0;
+}
+
+#spaceship-area #objects-frame #cheat {
+  background-color: rgb(33, 66, 99);
+  border: white solid 1px;
+  border-radius: .4rem;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.2rem;
+  padding: .3rem;
+  text-shadow:  0 0 1rem white;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+}
+
+#spaceship-area #objects-frame #give-up-btn {
+  background-color: rgb(200, 50, 0);
+  border: white solid 1px;
+  border-radius: .4rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 1rem crimson;
+  color: white;
+  font-size: 1.2rem;
+  padding: .3rem;
+  text-shadow: 0 0 1rem white;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+
+#spaceship-area #objects-frame #clock {
+  color: white;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+#spaceship-area #objects-frame #info-block {
+  background-image: linear-gradient(15deg, rgb(200, 200, 100), rgb(200, 100, 200), yellow);
+  border: #222;
+  border-radius: 1.5rem;
+  color: purple;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  text-shadow: 0 0 1rem purple;
+  z-index: -1;
+  
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+}
+
+#spaceship-area #objects-frame #spaceship {
+  font-size: 1.8rem;
+  transform: rotate(-45deg);
+  transition: all linear .5s;
+  text-align: center;
+  
+  position: relative;
+  top: 0;
+  left: 0;
+  
+  /* border-radius: 70% 0 50% 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+#spaceship-area #partial-report-frame #correct, #spaceship-area #partial-report-frame #incorrect {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0 1rem blue;
+}
+
+#spaceship-area #reboot-btn-frame #reboot-btn {
+  background-color: rgb(120, 200, 90);
+  box-shadow: 0 0 1rem rgb(110, 210, 100);
+}
+
+@media (max-width: 1205px) {
+  .std-frame {
+    height: 3.7rem;
+    width: 4.7rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #first-color {
+    position: fixed;
+    top: 25.5rem;
+    left: 18.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #second-color {
+    position: fixed;
+    top: 25.5rem;
+    left: 22.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #third-color {
+    position: fixed;
+    top: 25.5rem;
+    left: 26.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #suggest-btn {
+    position: fixed;
+    top: 21.5rem;
+    left: 31.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #user-custom-background {
+    position: fixed;
+    top: 25.5rem;
+    left: 31.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #suggest-btn {
+    top: 34.5rem;
+    left: 35.5rem;
+  }
+}
+
+@media (max-width: 835px) {
+  .std-frame {
+    height: 3.3rem;
+    width: 3.3rem;
+  }
+  button {
+    padding: .3rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #first-color {
+    top: 25rem;
+    left: 13.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #second-color {
+    top: 25rem;
+    left: 17.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #third-color {
+    top: 25rem;
+    left: 21.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #suggest-btn {
+    top: 22.5rem;
+    left: 31.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #settings-area #custom-background-label-frame #custom-background-label {
+    position: fixed;
+    top: 20rem;
+    left: 8rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #first-color {
+    top: 23rem;
+    left: 10.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #second-color {
+    top: 23rem;
+    left: 14.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #third-color {
+    top: 23rem;
+    left: 18.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #suggest-btn {
+    top: 24.5rem;
+    left: 27rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #user-custom-background {
+    top: 27rem;
+    left: 27rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .std-frame {
+    height: 2.5rem;
+    width: 3.5rem;
+  }
+  #settings-area #background-frame #models {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+  }
+  #settings-area #background-frame {
+    margin: 4rem 8rem 0 0;
+  }
+  #settings-area #levels-frame {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #first-color {
+    top: 23rem;
+    left: 7.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #second-color {
+    top: 23rem;
+    left: 11.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #third-color {
+    top: 23rem;
+    left: 15.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #suggest-btn {
+    top: 27rem;
+    left: 27rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #user-custom-background {
+    top: 30rem;
+    left: 27rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #suggest-btn {
+    top: 27rem;
+    left: 23.5rem;
+  }
+  #settings-area #custom-background-frame #rgb-inputs-frame #user-custom-background-frame #user-custom-background {
+    left: 21.5rem;
+  }
+}
